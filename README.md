@@ -5,6 +5,11 @@
 ###优秀第三方
 ###优秀博客
 ###Xcode插件
+###奇淫杂技
+###实验
+
+
+###鉴黄师 :
 #ColorSense-for-Xcode
 #XToDo
 #XAlign
@@ -21,6 +26,3 @@
 #Auto-Importer-for-Xcode
 #Backlight
 #injectionforxcode
-###奇淫杂技
-###实验
-
