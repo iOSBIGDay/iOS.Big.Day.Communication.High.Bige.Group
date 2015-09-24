@@ -1,5 +1,6 @@
 #优秀iOS开发博客收藏
 
+
 博客地址 | RSS地址
 ----- | -----
 [OneV's Den](http://onevcat.com) | <http://onevcat.com/atom.xml>
@@ -63,3 +64,6 @@
 [老谭笔记](http://www.tanhao.me/) | <http://www.tanhao.me/atom.xml>
 [coderyi](http://www.coderyi.com/)|<http://www.coderyi.com/feed>
 [雷纯锋的技术博客](http://blog.leichunfeng.com) | <http://blog.leichunfeng.com/atom.xml>
+
+
+####感谢https://github.com/tangqiaoboy/iOSBlogCN
