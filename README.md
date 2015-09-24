@@ -7,22 +7,3 @@
 ##Xcode插件
 ##奇淫杂技
 #实验
-
-
-##鉴黄师 :
-###ColorSense-for-Xcode
-###XToDo
-###XAlign
-###ZLXCodeLine
-###KSImageNamed-Xcode
-###KSHObjcUML
-###ESJsonFormat-Xcode
-###VVDocumenter-Xcode
-###SCXcodeSwitchExpander
-###ZLGotoSandboxPlugin
-###CocoaPodUI
-###Alcatraz
-###deriveddata-exterminator
-###Auto-Importer-for-Xcode
-###Backlight
-###injectionforxcode
