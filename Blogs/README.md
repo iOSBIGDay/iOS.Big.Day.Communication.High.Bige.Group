@@ -3,6 +3,13 @@
 ####iOS学习资料(github)
 [trip-to-iOS](https://github.com/NunchakusHuang/trip-to-iOS)
 
+[awesome-ios-ui](https://github.com/cjwirth/awesome-ios-ui
+)
+
+[Github上排名靠前的iOS库](http://github.ibireme.com/github/list/ios/)
+
+[网易新闻iOS版使用的开源组件](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Blogs/网易新闻ios版使用的开源组件.md)
+
 ####iOS学习资料(博客)
 
 博客 | 地址
