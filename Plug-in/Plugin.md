@@ -12,3 +12,6 @@
 ######[Alcatraz](https://github.com/supermarin/Alcatraz) xcode中快速安装插件的插件
 ######[deriveddata-exterminator](https://github.com/kattrali/deriveddata-exterminator) 模拟器/真机数据查看/清理插件
 ######[Backlight](https://github.com/limejelly/Backlight-for-XCode) xcode中高亮插件
+######[AdjustFontSize](https://github.com/zats/AdjustFontSize-Xcode-Plugin) xcode中快速修改字体大小的插件
+######[ATProperty](https://github.com/Draveness/ATProperty) xcode中快速生成属性，非常方便，值得推荐
+######[RTImageAssets](https://github.com/rickytan/RTImageAssets) xcode中自动使用@3x图生成@1x,@2x的图
