@@ -1,7 +1,11 @@
 #优秀iOS开发博客收藏
 
+####iOS学习资料(github)
+[trip-to-iOS](https://github.com/NunchakusHuang/trip-to-iOS)
 
-博客地址 | RSS地址
+####iOS学习资料(博客)
+
+博客 | 地址
 ----- | -----
 [OneV's Den](http://onevcat.com) | <http://onevcat.com/>
 [破船之家](http://beyondvincent.com) | <http://beyondvincent.com/>
