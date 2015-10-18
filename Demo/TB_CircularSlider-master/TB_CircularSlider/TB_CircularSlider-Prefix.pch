@@ -1,0 +1,18 @@
+//
+// Prefix header for all source files of the 'TB_CircularSlider' target in the 'TB_CircularSlider' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+#define appMainColor [UIColor colorWithRed:128/255.f green:196/255.f blue:62/255.f alpha:1.f]
+
+
+#define RGB(A,B,C) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1.0]
