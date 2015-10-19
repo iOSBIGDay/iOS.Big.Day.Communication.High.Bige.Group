@@ -20,6 +20,7 @@
 <p>16、<a href="https://github.com/TTTAttributedLabel/TTTAttributedLabel" target="_blank">TTTAttributedLabel</a><br>UILabel 的替代品, 使 iOS 上的 Label 功能更加丰富, 可支持链接植入等功能</p>
 <p>17、<a href="https://github.com/probablycorey/wax" target="_blank">wax</a><br>Wax 就是使用 Lua 脚本语言来编写 ios原生应用 的一个框架,它把Lua脚本语言和原生 Objective-C 应用编程接口(API)结合起来</p>
 <p>18、<a href="https://github.com/mattconnolly/ZipArchive" target="_blank">ZipArchive</a><br>可用于压缩和解压缩文件</p>
+<p>19、<a href="http://blog.csdn.net/long_ios/article/details/48049123 " target="_blank">常用的xcode插件</a><br>比较好的插件  提高我们的开发效率</p>
 <p>来源：<a href="http://m.163.com/special/newsclient/ios_libraries.html" target="_blank">网易新闻的开源协议</a></p>
 
 
