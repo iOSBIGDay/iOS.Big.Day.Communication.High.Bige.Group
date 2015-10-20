@@ -32,7 +32,7 @@
 /** This function is called when Circular slider value changes **/
 -(void)newValue:(TBCircularSlider*)slider{
     //TBCircularSlider *slider = (TBCircularSlider*)sender;
-    NSLog(@"Slider Value %d",slider.angle);
+//    NSLog(@"Slider Value %d",slider.angle);
 }
 
 - (void)didReceiveMemoryWarning
