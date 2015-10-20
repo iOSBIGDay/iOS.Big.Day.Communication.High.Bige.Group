@@ -33,7 +33,6 @@
 		9A8C39591BD35A8A0005B747 /* sorry.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C393F1BD35A8A0005B747 /* sorry.png */; settings = {ASSET_TAGS = (); }; };
 		9A8C395A1BD35A8A0005B747 /* sorry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C39401BD35A8A0005B747 /* sorry@2x.png */; settings = {ASSET_TAGS = (); }; };
 		9A8C395B1BD35A8A0005B747 /* sorry@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C39411BD35A8A0005B747 /* sorry@3x.png */; settings = {ASSET_TAGS = (); }; };
-		9A8C395D1BD35DEA0005B747 /* pan.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C395C1BD35DEA0005B747 /* pan.png */; settings = {ASSET_TAGS = (); }; };
 		9A8C39611BD3C13D0005B747 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C395E1BD3C13D0005B747 /* box.png */; settings = {ASSET_TAGS = (); }; };
 		9A8C39621BD3C13D0005B747 /* box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C395F1BD3C13D0005B747 /* box@2x.png */; settings = {ASSET_TAGS = (); }; };
 		9A8C39631BD3C13D0005B747 /* box@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C39601BD3C13D0005B747 /* box@3x.png */; settings = {ASSET_TAGS = (); }; };
@@ -49,7 +48,6 @@
 		A5EB2F9A16A1E217006E4B6A /* TBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EB2F9916A1E217006E4B6A /* TBViewController.m */; };
 		A5EB2F9D16A1E217006E4B6A /* TBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EB2F9B16A1E217006E4B6A /* TBViewController.xib */; };
 		A5EB2FA616A1E2A5006E4B6A /* TBCircularSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EB2FA516A1E2A5006E4B6A /* TBCircularSlider.m */; };
-		A5EB2FAD16A1E874006E4B6A /* handle.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A5EB2FAC16A1E874006E4B6A /* handle.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +77,6 @@
 		9A8C393F1BD35A8A0005B747 /* sorry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sorry.png; sourceTree = "<group>"; };
 		9A8C39401BD35A8A0005B747 /* sorry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sorry@2x.png"; sourceTree = "<group>"; };
 		9A8C39411BD35A8A0005B747 /* sorry@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sorry@3x.png"; sourceTree = "<group>"; };
-		9A8C395C1BD35DEA0005B747 /* pan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pan.png; sourceTree = "<group>"; };
 		9A8C395E1BD3C13D0005B747 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		9A8C395F1BD3C13D0005B747 /* box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box@2x.png"; sourceTree = "<group>"; };
 		9A8C39601BD3C13D0005B747 /* box@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box@3x.png"; sourceTree = "<group>"; };
@@ -102,7 +99,6 @@
 		A5EB2F9C16A1E217006E4B6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TBViewController.xib; sourceTree = "<group>"; };
 		A5EB2FA416A1E2A5006E4B6A /* TBCircularSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCircularSlider.h; sourceTree = "<group>"; };
 		A5EB2FA516A1E2A5006E4B6A /* TBCircularSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCircularSlider.m; sourceTree = "<group>"; };
-		A5EB2FAC16A1E874006E4B6A /* handle.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = handle.jpeg; sourceTree = "<group>"; };
 		A5EB2FAE16A1E9AE006E4B6A /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,8 +223,6 @@
 				9A8C395E1BD3C13D0005B747 /* box.png */,
 				9A8C395F1BD3C13D0005B747 /* box@2x.png */,
 				9A8C39601BD3C13D0005B747 /* box@3x.png */,
-				9A8C395C1BD35DEA0005B747 /* pan.png */,
-				A5EB2FAC16A1E874006E4B6A /* handle.jpeg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -299,7 +293,6 @@
 				9A8C39591BD35A8A0005B747 /* sorry.png in Resources */,
 				9A8C39611BD3C13D0005B747 /* box.png in Resources */,
 				9A8C39481BD35A8A0005B747 /* right.png in Resources */,
-				9A8C395D1BD35DEA0005B747 /* pan.png in Resources */,
 				A5EB2F9716A1E217006E4B6A /* Default-568h@2x.png in Resources */,
 				9A8C394A1BD35A8A0005B747 /* right@3x.png in Resources */,
 				9A8C39541BD35A8A0005B747 /* Slice 15@3x.png in Resources */,
@@ -308,7 +301,6 @@
 				9A8C39571BD35A8A0005B747 /* Slice 16@3x.png in Resources */,
 				A5EB2F9D16A1E217006E4B6A /* TBViewController.xib in Resources */,
 				9A8C394C1BD35A8A0005B747 /* round_button@2x.png in Resources */,
-				A5EB2FAD16A1E874006E4B6A /* handle.jpeg in Resources */,
 				9A8C39511BD35A8A0005B747 /* Slice 1.png in Resources */,
 				9A8C39531BD35A8A0005B747 /* Slice 15@2x.png in Resources */,
 				9A8C394B1BD35A8A0005B747 /* round_button.png in Resources */,

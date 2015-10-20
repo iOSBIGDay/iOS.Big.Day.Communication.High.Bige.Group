@@ -132,12 +132,15 @@
     CGPoint prePoint = [touch previousLocationInView:self];
     CGPoint centerPoint = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
     
-//    float currentAngle = AngleFromNorth(centerPoint, lastPoint, NO);
-//    float preAngle = AngleFromNorth(centerPoint, prePoint, NO);
+    float currentAngle = AngleFromNorth(centerPoint, lastPoint, NO);
+    float preAngle = AngleFromNorth(centerPoint, prePoint, NO);
 
+
+    
+    
 
  float imageAngle = AngleFromNorth(pan.center, CGPointMake(pan.transform.tx, pan.transform.ty), NO);
-    NSLog(@"add %f",imageAngle);
+//    NSLog(@"add %f",imageAngle);
 
     if (imageAngle == 360.f) {
         NSLog(@"add");
@@ -186,7 +189,23 @@
 }
 
 
-#pragma mark - Drawing Functions - 
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+
+    CGPoint lastPoint = [touch locationInView:self];
+    CGPoint centerPoint = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+    
+    float currentAngle = AngleFromNorth(centerPoint, lastPoint, NO);
+//    NSLog(@"%f",currentAngle);
+    if (currentAngle == 360.f) {
+        NSLog(@"add");
+    }
+    [self movehandle:lastPoint];
+
+}
+
+#pragma mark - Drawing Functions -
 
 //Use the draw rect to draw the Background, the Circle and the Handle 
 -(void)drawRect:(CGRect)rect{
@@ -337,6 +356,10 @@
     
 }
 
+
+
+//采用了贴图方案 所以这个方法就没用了
+
 /** Draw a white knob over the circle **/
 -(void) drawTheHandle:(CGContextRef)ctx{
     
@@ -353,10 +376,6 @@
 //    CGContextFillEllipseInRect(ctx, CGRectMake(handleCenter.x, handleCenter.y, TB_LINE_WIDTH, TB_LINE_WIDTH));
 //    
 //    CGContextRestoreGState(ctx);
-    
-    
-    
-    
     
     /*图片*/
     UIImage *image = [UIImage imageNamed:@"round_button"];
@@ -454,15 +473,13 @@
     //Update the textfield
     _textField.text =  [NSString stringWithFormat:@"%0.0f", self.angle];
     
-    //Redraw
-    [self setNeedsDisplay];
-    
     
     //旋转盘子
     pan.transform = CGAffineTransformMakeRotation(self.angle * (M_PI /180.0f));
     
     
-    
+    //Redraw
+    [self setNeedsDisplay];
 
     
 }
