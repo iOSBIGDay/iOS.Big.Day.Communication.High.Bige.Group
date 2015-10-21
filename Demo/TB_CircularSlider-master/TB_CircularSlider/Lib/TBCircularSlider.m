@@ -21,12 +21,15 @@
 #pragma mark - Private -
 
 @interface TBCircularSlider(){
-    UITextField *_textField;
+    UILabel *_textField;
+    
     int radius;
     
     UIImageView *pan;
     
-    
+    int tempCirclernum;//存放已经划过的圈数
+    BOOL isadd ;
+
 }
 @end
 
@@ -47,32 +50,33 @@
         
         //Initialize the Angle at 0
         self.angle = 0;
-        self.steps = 7;
-        
+        self.steps = 10;
+        self.isSmooth = YES;
         //Define the Font
         UIFont *font = [UIFont fontWithName:TB_FONTFAMILY size:TB_FONTSIZE];
         //Calculate font size needed to display 3 numbers
         NSString *str = @"000";
         CGSize fontSize = [str sizeWithFont:font];
         
-        
-
-
-        
+        tempCirclernum = 0;//初始化当前圈数
+        self.Circlenum = 3;
+        self.sumangle = 0.f;
+        isadd = NO;
         
         [self addPanzi];
         
         
         //Using a TextField area we can easily modify the control to get user input from this field
-        _textField = [[UITextField alloc]initWithFrame:CGRectMake((frame.size.width  - fontSize.width) /2,
+        _textField = [[UILabel alloc]initWithFrame:CGRectMake((frame.size.width  - fontSize.width) /2,
                                                                   (frame.size.height - fontSize.height) /2,
                                                                   fontSize.width,
                                                                   fontSize.height)];
         _textField.backgroundColor = [UIColor clearColor];
-        _textField.textColor = appMainColor;
+        _textField.textColor = normalGreen;
         _textField.textAlignment = NSTextAlignmentCenter;
         _textField.font = font;
-        _textField.text = [NSString stringWithFormat:@"%d",self.angle];
+        _textField.adjustsFontSizeToFitWidth = YES;
+        _textField.text = [NSString stringWithFormat:@"%0.0f",self.angle];
         _textField.enabled = NO;
         
         [self addSubview:_textField];
@@ -124,26 +128,84 @@
 -(BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     [super continueTrackingWithTouch:touch withEvent:event];
 
-    //Get touch location
     CGPoint lastPoint = [touch locationInView:self];
+    CGPoint prePoint = [touch previousLocationInView:self];
+    CGPoint centerPoint = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+    
+    float currentAngle = AngleFromNorth(centerPoint, lastPoint, NO);
+    float preAngle = AngleFromNorth(centerPoint, prePoint, NO);
 
-    //Use the location to design the Handle
-    [self movehandle:lastPoint];
+
     
-    //Control value has changed, let's notify that   
+    
+
+ float imageAngle = AngleFromNorth(pan.center, CGPointMake(pan.transform.tx, pan.transform.ty), NO);
+//    NSLog(@"add %f",imageAngle);
+
+    if (imageAngle == 360.f) {
+        NSLog(@"add");
+    }
+    
+     [self movehandle:lastPoint];
+    
+    //Control value has changed, let's notify that
     [self sendActionsForControlEvents:UIControlEventValueChanged];
-    
     return YES;
 }
 
 /** Track is finished **/
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     [super endTrackingWithTouch:touch withEvent:event];
+//    NSLog(@"finsh");
     
+    
+    if (!self.isSmooth) {
+        
+    
+    //用来滑动到刻度值上 不连续滑动
+    CGPoint lastPoint = [touch locationInView:self];
+    CGPoint centerPoint = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+
+    float currentAngle = AngleFromNorth(centerPoint, lastPoint, NO);
+//    NSLog(@"%f",currentAngle);
+    
+    float everangle = 360.0 /self.steps;
+
+    double stepss = currentAngle/everangle;
+    
+//    NSLog(@"angle === %f",ceil(stepss));
+    
+    self.angle = everangle*round(stepss);
+    
+    //Redraw
+    [self setNeedsDisplay];
+    
+    pan.transform = CGAffineTransformMakeRotation(self.angle * (M_PI /180.0f));
+    _textField.text =  [NSString stringWithFormat:@"%f", self.angle];
+        
+        
+    }
+
 }
 
 
-#pragma mark - Drawing Functions - 
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+
+    CGPoint lastPoint = [touch locationInView:self];
+    CGPoint centerPoint = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+    
+    float currentAngle = AngleFromNorth(centerPoint, lastPoint, NO);
+//    NSLog(@"%f",currentAngle);
+    if (currentAngle == 360.f) {
+        NSLog(@"add");
+    }
+    [self movehandle:lastPoint];
+
+}
+
+#pragma mark - Drawing Functions -
 
 //Use the draw rect to draw the Background, the Circle and the Handle 
 -(void)drawRect:(CGRect)rect{
@@ -154,12 +216,29 @@
     
 /** Draw the Background **/
     
+    //最外层的淡灰色
+    
+    //Create the path
+    CGContextAddArc(ctx, self.frame.size.width/2, self.frame.size.height/2, radius+5, 0, M_PI *2, 0);
+    
+    //Set the stroke color to black
+    
+    [[UIColor colorWithRed:241/255.f green:241/255.f blue:241/255.f alpha:1.0] setStroke];
+    //    [[UIColor redColor] setStroke];
+    //Define line width and cap
+    CGContextSetLineWidth(ctx, TB_BACKGROUND_WIDTH);
+    CGContextSetLineCap(ctx, kCGLineCapButt);
+    
+    //draw it!
+    CGContextDrawPath(ctx, kCGPathStroke);
+    
+    
     //Create the path
     CGContextAddArc(ctx, self.frame.size.width/2, self.frame.size.height/2, radius, 0, M_PI *2, 0);
     
     //Set the stroke color to black
     
-    [[UIColor colorWithRed:233/255.f green:233/255.f blue:233/255.f alpha:1.0] setStroke];
+    [[UIColor colorWithRed:215/255.f green:215/255.f blue:215/255.f alpha:1.0] setStroke];
     
     //Define line width and cap
     CGContextSetLineWidth(ctx, TB_BACKGROUND_WIDTH);
@@ -167,6 +246,12 @@
     
     //draw it!
     CGContextDrawPath(ctx, kCGPathStroke);
+    
+    
+    
+   
+    
+    
     
    
 //** Draw the circle (using a clipped gradient) **/
@@ -271,6 +356,10 @@
     
 }
 
+
+
+//采用了贴图方案 所以这个方法就没用了
+
 /** Draw a white knob over the circle **/
 -(void) drawTheHandle:(CGContextRef)ctx{
     
@@ -287,10 +376,6 @@
 //    CGContextFillEllipseInRect(ctx, CGRectMake(handleCenter.x, handleCenter.y, TB_LINE_WIDTH, TB_LINE_WIDTH));
 //    
 //    CGContextRestoreGState(ctx);
-    
-    
-    
-    
     
     /*图片*/
     UIImage *image = [UIImage imageNamed:@"round_button"];
@@ -311,10 +396,10 @@
         
 //        float angleInt = floor(currentangle);
         float angleInt = currentangle;
-        NSLog(@"%f step",currentangle);
-       float acturalRad = radius + TB_LINE_WIDTH/2 -2;
+//        NSLog(@"%f step",currentangle);
+        float acturalRad = radius + TB_LINE_WIDTH/2 -1;
         
-        float inner = 18.0;
+        float inner = 17.0;
         float innerrad = acturalRad - inner;
  
         float X =  0.0;
@@ -335,9 +420,13 @@
         //points[]坐标数组，和count大小
         CGContextSetRGBStrokeColor(ctx,
                                    1.0, 1.0, 1.0, 1.0);
-         CGContextSetShadowWithColor(ctx, CGSizeMake(0,0), 2, RGB(174,174,174).CGColor);
+         CGContextSetShadowWithColor(ctx, CGSizeMake(-2,0), 0.5, RGB(192,192,192).CGColor);
         CGContextAddLines(ctx, aPoints, 2);//添加线
+//         CGContextSetShadowWithColor(ctx, CGSizeMake(0, 0), 3, [UIColor blackColor].CGColor);
         CGContextDrawPath(ctx, kCGPathStroke); //根据坐标绘制路径
+        
+        
+        
         
         
     }
@@ -357,27 +446,40 @@
 /** Move the Handle **/
 -(void)movehandle:(CGPoint)lastPoint{
     
+
+
+    
+    
+    
     //Get the center
     CGPoint centerPoint = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
     
     //Calculate the direction from a center point and a arbitrary position.
     float currentAngle = AngleFromNorth(centerPoint, lastPoint, NO);
-    int angleInt = floor(currentAngle);
+    int angleFlo = floor(currentAngle);
     
     
+//    float everangle = 360.0 /self.steps;
+//    double stepss = currentAngle/everangle;
+    
+//    NSLog(@"angle === %f",ceil(stepss));
     
     //Store the new angle
-    self.angle =  angleInt;//本来是360-angleInt
-    //Update the textfield 
-    _textField.text =  [NSString stringWithFormat:@"%d", self.angle];
     
-    //Redraw
-    [self setNeedsDisplay];
+    self.angle =  angleFlo;//本来是360-angleInt
+//    self.angle = everangle*ceil(stepss);
+    
+    
+    //Update the textfield
+    _textField.text =  [NSString stringWithFormat:@"%0.0f", self.angle];
     
     
     //旋转盘子
-    pan.transform = CGAffineTransformMakeRotation(angleInt * (M_PI /180.0f));
+    pan.transform = CGAffineTransformMakeRotation(self.angle * (M_PI /180.0f));
     
+    
+    //Redraw
+    [self setNeedsDisplay];
 
     
 }
