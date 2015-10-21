@@ -25,7 +25,6 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-//    self = [super initWithFrame:CGRectMake(frame.origin.x - 1, frame.origin.y - 1, frame.size.width - 2, frame.size.height - 2)];
     self = [super initWithFrame:frame];
     if (self) {
         [self setback];
@@ -35,9 +34,7 @@
 
 - (void)setback
 {
-//    self.layer.masksToBounds = YES;
     self.backgroundColor = [UIColor clearColor];
-//    self.layer.cornerRadius = self.frame.size.width / 2;
 }
 
 - (void)drawRect:(CGRect)rect
@@ -67,18 +64,11 @@
 }
 
 -(CGPoint)pointFromAngle:(float)angleInt{
-    
-//    NSLog(@"%f",ToRad(angleInt));
-    //Circle center
     CGFloat radius = self.bounds.size.width / 2 - 3;
-    
     CGPoint centerPoint = CGPointMake(radius + 3, radius + 3);
-    
-    //The point position on the circumference
     CGPoint result;
     result.y = round(centerPoint.y + radius * sin(ToRad(angleInt) - ToRad(89)));
     result.x = round(centerPoint.x + radius * cos(ToRad(angleInt) - ToRad(89)));
-//    NSLog(@"%f,%f",result.x,result.y);
     return result;
 }
 
