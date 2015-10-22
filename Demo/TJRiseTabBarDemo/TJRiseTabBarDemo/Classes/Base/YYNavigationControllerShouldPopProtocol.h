@@ -13,6 +13,6 @@
 @protocol YYNavigationControllerShouldPopProtocol <NSObject>
 
 @optional
--(BOOL)tj_navagationControllerShouldPopWhenSystemBackItemClick:(TJNavigationController *)navigationController;
+-(BOOL)yy_navagationControllerShouldPopWhenSystemBackItemClick:(TJNavigationController *)navigationController;
 
 @end

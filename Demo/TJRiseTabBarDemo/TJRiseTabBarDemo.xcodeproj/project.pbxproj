@@ -29,6 +29,8 @@
 		CC43D1E91BD76A4C0050DE93 /* LLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC43D1D91BD76A4C0050DE93 /* LLTabBar.m */; settings = {ASSET_TAGS = (); }; };
 		CC43D1EA1BD76A4C0050DE93 /* LLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CC43D1DB1BD76A4C0050DE93 /* LLTabBarItem.m */; settings = {ASSET_TAGS = (); }; };
 		CC43D1EE1BD76B7D0050DE93 /* IMG_0344.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC43D1ED1BD76B7D0050DE93 /* IMG_0344.jpg */; settings = {ASSET_TAGS = (); }; };
+		CC43D2001BD78CBD0050DE93 /* TJPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC43D1FE1BD78CBD0050DE93 /* TJPushViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CC43D2011BD78CBD0050DE93 /* TJPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC43D1FF1BD78CBD0050DE93 /* TJPushViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,10 @@
 		CC43D1DA1BD76A4C0050DE93 /* LLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTabBarItem.h; sourceTree = "<group>"; };
 		CC43D1DB1BD76A4C0050DE93 /* LLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTabBarItem.m; sourceTree = "<group>"; };
 		CC43D1ED1BD76B7D0050DE93 /* IMG_0344.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0344.jpg; sourceTree = "<group>"; };
+		CC43D1FB1BD78C020050DE93 /* YYNavigationControllerShouldPopProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYNavigationControllerShouldPopProtocol.h; sourceTree = "<group>"; };
+		CC43D1FD1BD78CBD0050DE93 /* TJPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPushViewController.h; sourceTree = "<group>"; };
+		CC43D1FE1BD78CBD0050DE93 /* TJPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPushViewController.m; sourceTree = "<group>"; };
+		CC43D1FF1BD78CBD0050DE93 /* TJPushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPushViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 		CC43D1BD1BD76A4C0050DE93 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				CC43D1FB1BD78C020050DE93 /* YYNavigationControllerShouldPopProtocol.h */,
 				CC43D1BE1BD76A4C0050DE93 /* TJBaseViewController.h */,
 				CC43D1BF1BD76A4C0050DE93 /* TJBaseViewController.m */,
 				CC43D1C01BD76A4C0050DE93 /* TJNavigationController.h */,
@@ -151,6 +158,7 @@
 		CC43D1C41BD76A4C0050DE93 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CC43D1FC1BD78CAF0050DE93 /* Push */,
 				CC43D1F31BD773E60050DE93 /* Amusement */,
 				CC43D1F21BD773DD0050DE93 /* Call */,
 				CC43D1F11BD773D70050DE93 /* Contact */,
@@ -243,6 +251,16 @@
 			name = Amusement;
 			sourceTree = "<group>";
 		};
+		CC43D1FC1BD78CAF0050DE93 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				CC43D1FD1BD78CBD0050DE93 /* TJPushViewController.h */,
+				CC43D1FE1BD78CBD0050DE93 /* TJPushViewController.m */,
+				CC43D1FF1BD78CBD0050DE93 /* TJPushViewController.xib */,
+			);
+			name = Push;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,6 +327,7 @@
 				CC43D1E21BD76A4C0050DE93 /* TJCallViewController.xib in Resources */,
 				CC43D1B01BD76A2A0050DE93 /* Main.storyboard in Resources */,
 				CC43D1E61BD76A4C0050DE93 /* TJHomeViewController.xib in Resources */,
+				CC43D2011BD78CBD0050DE93 /* TJPushViewController.xib in Resources */,
 				CC43D1E81BD76A4C0050DE93 /* TJMineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +343,7 @@
 				CC43D1E51BD76A4C0050DE93 /* TJHomeViewController.m in Sources */,
 				CC43D1EA1BD76A4C0050DE93 /* LLTabBarItem.m in Sources */,
 				CC43D1DC1BD76A4C0050DE93 /* TJBaseViewController.m in Sources */,
+				CC43D2001BD78CBD0050DE93 /* TJPushViewController.m in Sources */,
 				CC43D1E11BD76A4C0050DE93 /* TJCallViewController.m in Sources */,
 				CC43D1AA1BD76A2A0050DE93 /* AppDelegate.m in Sources */,
 				CC43D1E91BD76A4C0050DE93 /* LLTabBar.m in Sources */,
@@ -481,6 +501,7 @@
 				CC43D1BB1BD76A2A0050DE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

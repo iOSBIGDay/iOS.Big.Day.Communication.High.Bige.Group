@@ -7,8 +7,9 @@
 //
 
 #import "TJPushViewController.h"
+#import "YYNavigationControllerShouldPopProtocol.h"
 
-@interface TJPushViewController ()
+@interface TJPushViewController ()<YYNavigationControllerShouldPopProtocol>
 
 @end
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    [self setTitle:@"Push"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +26,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - ShouldPop Delegate
+-(BOOL)yy_navagationControllerShouldPopWhenSystemBackItemClick:(TJNavigationController *)navigationController{
+    
+    [[[UIAlertView alloc] initWithTitle:nil
+                                message:@"我就问你，确定要返回吗？"
+                               delegate:self
+                      cancelButtonTitle:@"取消"
+                      otherButtonTitles:@"确定", nil]
+     show];
+    
+    return NO;
 }
-*/
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if (buttonIndex) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 
 @end

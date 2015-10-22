@@ -7,6 +7,7 @@
 //
 
 #import "TJHomeViewController.h"
+#import "TJPushViewController.h"
 
 @interface TJHomeViewController ()
 
@@ -28,5 +29,8 @@
 
 
 - (IBAction)push:(id)sender {
+    TJPushViewController *nextPush = [[TJPushViewController alloc] init];
+    [nextPush setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:nextPush animated:YES];
 }
 @end
