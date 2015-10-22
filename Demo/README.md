@@ -14,8 +14,10 @@
 
 ![A preview of this control](https://github.com/iOSBIGDay/CircularSlider/blob/master/CircularSlider/demo.gif)
 
-  
-  
+### [CrView](https://github.com/iOSBIGDay/CrView)
+
+
+![A preview of this control](https://github.com/iOSBIGDay/CrView/blob/master/HuiHuaTest/1.gif) 
   
   
   
