@@ -5,6 +5,18 @@
   
   
   
+  -----------------
+  
+  DEMO 效果
+
+### [CircularSlider](https://github.com/iOSBIGDay/CircularSlider)
+
+
+![A preview of this control](https://github.com/iOSBIGDay/CircularSlider/blob/master/CircularSlider/demo.gif)
+
+  
+  
+  
   
   
   
