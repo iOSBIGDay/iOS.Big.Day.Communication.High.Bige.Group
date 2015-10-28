@@ -1,11 +1,30 @@
-##iOS.Big.Day.Communication.High.Bige.Group
+# iOS Big Day Group
 
-### 这是iOS资料收集专用
+# Overview
+突然有一天， **“水“** 群里一个日常的话题**【一个个的真xx能水，就不能干点正事吗？这还是技术交流群么？】**被重提了出来，于是乎就有了这个组。
+
+	这个组是干啥用的呢？
+	
+	群里的水x们都是些搬砖能手，平时项目里也都搬了不少
+	
+	然而搬完一个项目又得搬另一个项目，杂七杂八的堆成堆不好找，所以在这里做个收集。
+	
+	嗯，最后是英俊的群主提出的这个想法！	(和这个X一样的名字)
+
+# Objective-C
+
+-  [优秀的第三方开源库](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Blogs/OpenSources.md)
+-  [优秀的博客](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/tree/master/Blogs)
+-  [常用的Xcode插件](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Plug-in/README.md)
+-  [OC的奇淫巧技](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Black Magic/UOnesTestDemo/README.md)
+-  [群里成员自制Demo](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/tree/master/Demo)
+-  [面试题](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Blogs/miantiaomao.md)
 
 
-####[优秀第三方](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Blogs/OpenSources.md)
-####[优秀博客](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/tree/master/Blogs)
-####[Xcode插件](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Plug-in/README.md)
-####[奇淫巧技](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Black Magic/UOnesTestDemo/README.md)
-####[实验](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/tree/master/Demo)
-####[面条猫收集的面试题](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Blogs/miantiaomao.md)
+# Swift
+
+- [Swift 1.0 ~ 2.0 中文翻译官方文档](https://github.com/iOSBIGDay/the-swift-programming-language-in-chinese)
+- [一个有质量的Swift学习博客, 作者: @TBXark
+](http://tbxark.github.io/archives/)
+
+
