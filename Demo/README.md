@@ -5,19 +5,12 @@
   
   
   
-  -----------------
-  
-  DEMO 效果
+# 自产 Demos
 
-### [CircularSlider](https://github.com/iOSBIGDay/CircularSlider)
-
-
-![A preview of this control](https://github.com/iOSBIGDay/CircularSlider/blob/master/CircularSlider/demo.gif)
-
-### [CrView](https://github.com/iOSBIGDay/CrView)
-
-
-![A preview of this control](https://github.com/iOSBIGDay/CrView/blob/master/HuiHuaTest/1.gif) 
+名称 | 预览
+------- | -------
+ [CircularSlider](https://github.com/iOSBIGDay/CircularSlider) | ![A preview of this control](https://github.com/iOSBIGDay/CircularSlider/blob/master/CircularSlider/demo.gif)
+[CrView](https://github.com/iOSBIGDay/CrView) | ![A preview of this control](https://github.com/iOSBIGDay/CrView/blob/master/HuiHuaTest/1.gif) 
   
   
   
