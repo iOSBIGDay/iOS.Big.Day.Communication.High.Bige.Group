@@ -1,6 +1,5 @@
 # iOS Big Day Group
 ![group logo](https://github.com/iOSBIGDay/iOS.Big.Day.Communication.High.Bige.Group/blob/master/Black%20Magic/icon/logo.jpg?raw=true)
-
 # Overview
 突然有一天， **“水“** 群里一个日常的话题**【一个个的真xx能水，就不能干点正事吗？这还是技术交流群么？】**被重提了出来，于是乎就有了这个组。
 
