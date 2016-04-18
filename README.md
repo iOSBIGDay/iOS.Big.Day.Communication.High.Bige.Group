@@ -32,7 +32,7 @@
 
 # Other
 
-以上任何一项如有侵权行为，请微博联系我 [@保安队长豁牙子](http://weibo.com/tofumate)
+以上任何一项如有侵权行为，请微博联系我们 [@Tech](http://weibo.com/techistoner?from=usercardnew&refer_flag=0000020001_)  [@保安队长豁牙子](http://weibo.com/tofumate) 
 
 
 # License
